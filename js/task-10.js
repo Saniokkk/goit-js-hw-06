@@ -9,8 +9,8 @@ const boxes = document.querySelector('div#boxes')
 btnCreateRef.addEventListener('click',createBoxes)
 btnDestroyRef.addEventListener('click', destroyBoxes)
 
-let sizeBox = 20;
 function createBoxes() {
+  let sizeBox = 20;
   const boxesArr = [];
   const amount = document.querySelector("#controls input").value;
   
@@ -28,6 +28,5 @@ function createBoxes() {
 
 function destroyBoxes() {
   boxes.innerHTML = '';
-  sizeBox = 20;
 }
 
