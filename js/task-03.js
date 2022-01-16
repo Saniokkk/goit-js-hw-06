@@ -15,10 +15,17 @@ const images = [
 
 const listGallery = document.querySelector('ul.gallery');
 
-const listImage = images.map(({ url, alt }) => {
-  return `<li class="gallery_item"><img src='${url}', alt='${alt}'></li>`;
-}).join('');
+// const listImage = images.map(({ url, alt }) => {
+//   return `<li class="gallery_item"><img src='${url}', alt='${alt}'></li>`;
+// }).join('');
+
+const listImage = images.reduce((acc, { url, alt }) => { 
+
+  acc += `<li class="gallery_item"><img src='${url}', alt='${alt}'></li>`;
+  return acc;
+},'');
 
 listGallery.insertAdjacentHTML('beforeend', listImage)
+
 
 

@@ -11,8 +11,8 @@ btnDestroyRef.addEventListener('click', destroyBoxes)
 
 function createBoxes() {
   let sizeBox = 20;
-  const boxesArr = [];
   const amount = document.querySelector("#controls input").value;
+  const boxesArr = [];
   
   for (let i = 1; i <= amount; i += 1) {
     const box = document.createElement('div'); 
